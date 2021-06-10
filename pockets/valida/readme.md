@@ -12,7 +12,7 @@
 > 使用
 
 ``` javascript
-import { Doraemon_Valida } from '../index'
+import { Doraemon_Valida } from 'DoraemonPocket'
 
 //验证是否为姓名
 Doraemon_Valida.RegCheck(Doraemon_Valida.RegTypes.Reg_Name ,'doraemon123456')
