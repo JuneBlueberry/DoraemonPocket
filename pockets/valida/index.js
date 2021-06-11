@@ -2,7 +2,7 @@
  * @Author: blueberry 
  * @Date: 2021-06-09 14:23:39 
  * @Last Modified by: blueberry
- * @Last Modified time: 2021-06-10 15:51:03
+ * @Last Modified time: 2021-06-10 16:55:32
  */
 
 import Valida_Methods from './lib/valida_methods'
