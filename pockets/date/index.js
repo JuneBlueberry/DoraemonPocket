@@ -2,7 +2,7 @@
  * @Author: blueberry 
  * @Date: 2021-06-18 11:31:01 
  * @Last Modified by: blueberry
- * @Last Modified time: 2021-06-18 17:38:38
+ * @Last Modified time: 2021-06-18 18:46:40
  */
 
 /**
@@ -17,8 +17,8 @@ function Doraemon_Date(time) {
     if(!time) _time = new Date()
     else if(Object.prototype.toString.call(time) === '[object Date]') _time = time
     else if(typeof time === 'number') {
-        if(time.length == 13) _time = new Date(time)
-        else if (time.length >= 10 && time.length < 13) _time = new Date(parseInt(time.toString().padEnd(13, 0)))
+        if(time.toString().length == 13) _time = new Date(time)
+        else if (time.toString().length >= 10 && time.toString().length < 13) _time = new Date(parseInt(time.toString().padEnd(13, 0)))
         else throw '请输入正确的时间戳'
     }
     else if(typeof time === 'string') {
@@ -43,6 +43,13 @@ class Date_Method {
         this.day = time.getDay()
     }
 
+    /**
+     * 时间格式化
+     * @param {格式化的规则} str 
+     *      yyyy: 
+     *      MM
+     * @returns 时间字符串
+     */
     format(str){
         return `${this.year}-${this.month}-${this.date} ${this.hour}:${this.minite}:${this.second}`
     }
