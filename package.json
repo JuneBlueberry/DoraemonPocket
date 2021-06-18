@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "demo": "webpack",
     "test": "mocha --require @babel/register"
   },
   "author": "blueberry",
