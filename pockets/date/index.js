@@ -2,7 +2,7 @@
  * @Author: blueberry 
  * @Date: 2021-06-18 11:31:01 
  * @Last Modified by: blueberry
- * @Last Modified time: 2021-06-18 18:46:40
+ * @Last Modified time: 2021-06-21 18:14:10
  */
 
 /**
@@ -32,15 +32,15 @@ class Date_Method {
     
     constructor(time){
         this.time = time
-        this.year = time.getFullYear()
-        this.month = time.getMonth()
-        this.date = time.getDate()
-        this.hour = time.getHours()
-        this.minite = time.getMinutes()
-        this.second = time.getMinutes()
-        this.millisecond = time.getMilliseconds()
+        this.year = time.getFullYear()                  //四位数的年份
+        this.month = time.getMonth()                    //月份
+        this.date = time.getDate()                      //每月的第几天
+        this.hour = time.getHours()                     //时
+        this.minite = time.getMinutes()                 //分
+        this.second = time.getMinutes()                 //秒
+        this.millisecond = time.getMilliseconds()       //毫秒
 
-        this.day = time.getDay()
+        this.day = time.getDay()                        //每周的第几天
     }
 
     /**
@@ -51,7 +51,24 @@ class Date_Method {
      * @returns 时间字符串
      */
     format(str){
-        return `${this.year}-${this.month}-${this.date} ${this.hour}:${this.minite}:${this.second}`
+        if(!str) str = 'YYYY-MM-dd HH:mm:ss'
+        // 替换年份
+        str = str.replace(/YYYY/, this.year)
+        // 替换月份
+        str = str.replace(/MM/, this.month >= 10 ? this.month : '0' + this.month)
+        str = str.replace(/M/, this.month)
+        // 替换每月的第几天
+        str = str.replace(/dd/, this.date >= 10 ? this.date : '0' + this.date)
+        str = str.replace(/d/, this.date)
+
+        // 替换时
+        str = str.replace(/HH/, this.hour >= 10 ? this.hour : '0' + this.hour)
+        // 替换分
+        str = str.replace(/mm/, this.minite >= 10 ? this.minite : '0' + this.minite)
+        // 替换秒
+        str = str.replace(/ss/, this.second >= 10 ? this.second : '0' + this.second)
+
+        return str
     }
 
 }
