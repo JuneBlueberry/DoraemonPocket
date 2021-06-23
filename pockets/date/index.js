@@ -2,7 +2,7 @@
  * @Author: blueberry 
  * @Date: 2021-06-18 11:31:01 
  * @Last Modified by: blueberry
- * @Last Modified time: 2021-06-21 18:14:10
+ * @Last Modified time: 2021-06-23 17:36:27
  */
 
 /**
@@ -33,7 +33,7 @@ class Date_Method {
     constructor(time){
         this.time = time
         this.year = time.getFullYear()                  //四位数的年份
-        this.month = time.getMonth()                    //月份
+        this.month = time.getMonth() + 1                //月份
         this.date = time.getDate()                      //每月的第几天
         this.hour = time.getHours()                     //时
         this.minite = time.getMinutes()                 //分
