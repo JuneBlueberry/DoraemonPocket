@@ -2,7 +2,7 @@
  * @Author: blueberry 
  * @Date: 2021-06-18 11:31:01 
  * @Last Modified by: blueberry
- * @Last Modified time: 2021-06-23 17:36:27
+ * @Last Modified time: 2021-06-24 15:35:46
  */
 
 /**
@@ -32,6 +32,7 @@ class Date_Method {
     
     constructor(time){
         this.time = time
+        
         this.year = time.getFullYear()                  //四位数的年份
         this.month = time.getMonth() + 1                //月份
         this.date = time.getDate()                      //每月的第几天
@@ -40,7 +41,10 @@ class Date_Method {
         this.second = time.getMinutes()                 //秒
         this.millisecond = time.getMilliseconds()       //毫秒
 
+        this.weeklist = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天']
+
         this.day = time.getDay()                        //每周的第几天
+        this.week = this.weeklist[this.day]             //周几
     }
 
     /**

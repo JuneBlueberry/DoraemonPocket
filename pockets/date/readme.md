@@ -27,5 +27,5 @@ Doraemon_Date().format('YYYY-MM-dd HH:mm:ss')
 - HH: 时
 - mm: 分
 - ss: 秒
-- week: 周几
-- WW: 当年的第几周
+- w: 当周的第几天(1，2)
+- week: 周几(星期一)
